@@ -1,0 +1,6 @@
+{
+  "name": "SOURCE iT AI — Курси зі штучного інтелекту",
+  "description": "Двомовний (UA/RU) об'ємний лендинг практичних курсів зі штучного інтелекту, промпт-інжинірингу, автоматизації та AI-розробки від SOURCE iT.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

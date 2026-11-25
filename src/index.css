@@ -1,0 +1,155 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Manrope", system-ui, -apple-system, sans-serif;
+  --font-sans: "Onest", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+    background-color: #ffffff;
+    color: #0b1f33;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* ============================================================================
+   SOURCE iT — Soft Volumetric 3D Design System
+   Corporate Palette: Sky Blue (#00AEEF / #0077C2), Orange (#F58220), White
+   ============================================================================ */
+
+.bg-atmospheric {
+  background-color: #f6fbff;
+  background-image:
+    radial-gradient(circle at 82% 14%, rgba(0, 174, 239, 0.1) 0%, transparent 45%),
+    radial-gradient(circle at 12% 70%, rgba(245, 130, 32, 0.05) 0%, transparent 40%),
+    linear-gradient(to right, rgba(0, 174, 239, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 174, 239, 0.04) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 56px 56px, 56px 56px;
+}
+
+.bg-blue-volumetric-band {
+  background-color: #0082c8;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(135deg, #009fe3 0%, #0077c2 55%, #005896 100%);
+  background-size: 56px 56px, 56px 56px, 100% 100%;
+}
+
+/* Volumetric 3D Cards */
+.volumetric-card-white {
+  background: #ffffff;
+  border: 1px solid #d5ecfc;
+  box-shadow:
+    0 5px 0 #d9effc,
+    0 18px 38px -12px rgba(0, 95, 158, 0.14);
+}
+
+.volumetric-card-sky {
+  background: linear-gradient(145deg, #00aeef 0%, #007ec7 100%);
+  border: 1px solid #6bd6ff;
+  box-shadow:
+    0 6px 0 #005b94,
+    0 22px 44px -12px rgba(0, 95, 158, 0.34);
+}
+
+.volumetric-card-orange {
+  background: linear-gradient(145deg, #ff962e 0%, #e46a04 100%);
+  border: 1px solid #ffbe7a;
+  box-shadow:
+    0 6px 0 #a84700,
+    0 22px 44px -12px rgba(190, 82, 0, 0.32);
+}
+
+.volumetric-card-deep {
+  background: linear-gradient(145deg, #0066aa 0%, #003e6b 100%);
+  border: 1px solid #2ab8f5;
+  box-shadow:
+    0 6px 0 #002647,
+    0 22px 44px -12px rgba(0, 34, 68, 0.38);
+}
+
+/* Tactile 3D Pill-Rounded Buttons */
+.btn-3d-orange {
+  background: linear-gradient(180deg, #ff9633 0%, #eb6f05 100%);
+  border: 1px solid #cf5b00;
+  box-shadow: 0 4px 0 #a84600, 0 10px 20px -6px rgba(235, 111, 5, 0.35);
+  transition: transform 140ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 140ms cubic-bezier(0.16, 1, 0.3, 1), filter 140ms ease;
+}
+
+.btn-3d-orange:hover {
+  filter: brightness(1.04);
+  transform: translateY(-1px);
+  box-shadow: 0 5px 0 #a84600, 0 14px 24px -6px rgba(235, 111, 5, 0.42);
+}
+
+.btn-3d-orange:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #a84600;
+}
+
+.btn-3d-sky {
+  background: linear-gradient(180deg, #16bfff 0%, #0085cc 100%);
+  border: 1px solid #0074b5;
+  box-shadow: 0 4px 0 #005b8f, 0 10px 20px -6px rgba(0, 133, 204, 0.32);
+  transition: transform 140ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 140ms cubic-bezier(0.16, 1, 0.3, 1), filter 140ms ease;
+}
+
+.btn-3d-sky:hover {
+  filter: brightness(1.04);
+  transform: translateY(-1px);
+  box-shadow: 0 5px 0 #005b8f, 0 14px 24px -6px rgba(0, 133, 204, 0.4);
+}
+
+.btn-3d-sky:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #005b8f;
+}
+
+.btn-3d-white {
+  background: #ffffff;
+  border: 1px solid #c9e6f9;
+  box-shadow: 0 4px 0 #cbe7f8, 0 8px 18px -6px rgba(0, 118, 186, 0.14);
+  transition: transform 140ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 140ms cubic-bezier(0.16, 1, 0.3, 1), background-color 140ms ease;
+}
+
+.btn-3d-white:hover {
+  background: #f5fbff;
+  transform: translateY(-1px);
+  box-shadow: 0 5px 0 #b7dff7, 0 12px 22px -6px rgba(0, 118, 186, 0.2);
+}
+
+.btn-3d-white:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #cbe7f8;
+}
+
+.tilt-card-inner {
+  transition: transform 180ms cubic-bezier(0.16, 1, 0.3, 1);
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .btn-3d-orange,
+  .btn-3d-sky,
+  .btn-3d-white,
+  .tilt-card-inner {
+    transition: none;
+    transform: none !important;
+  }
+}
